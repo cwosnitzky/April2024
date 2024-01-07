@@ -1,0 +1,161 @@
+{
+    "entrance": {
+        "text": "This is the entrance.\nThere is a cake on the floor.\nThere is a large stairway. You can hear the monster growling upstairs.\nThere are doors to the left and the right.",
+        "actions": {
+            "left": {
+                "description": "Go through the left door.",
+                "text": "You go left.",
+                "next": "pizza_room",
+                "reward": null,
+                "skip": false
+            },
+            "right": {
+                "description": "Go through the right door.",
+                "text": "You go right",
+                "next": "bear_room",
+                "reward": null,
+                "skip": false
+            },
+            "up": {
+                "description": "Go up the stairs, if you are ready.",
+                "text": "You go up the stairs to where the monster waits.",
+                "next": "monster_room",
+                "reward": null,
+                "skip": false
+            },
+            "eat": {
+                "description": "Eat the cake.",
+                "text": "The cake was poisoned, but also delicious.",
+                "next": "game_over",
+                "reward": null,
+                "skip": false
+            }
+        }
+    },
+    "pizza_room": {
+        "text": [
+            "It is bright and cheerful, with a great window and blue curtains\nThere is pizza on the table.",
+            "It is bright and cheerful, with a great window and blue curtains\nThere is an empty plate on the table."
+        ],
+        "actions": {
+            "back": {
+                "description": "Go through the door behind you.",
+                "text": "You go back",
+                "next": "entrance",
+                "reward": null,
+                "skip": false
+            },
+            "forward": {
+                "description": "Go through the door in front of you.",
+                "text": "You go forward.",
+                "next": "torch_room",
+                "reward": null,
+                "skip": false
+            },
+            "eat": {
+                "description": "Eat the pizza.",
+                "text": "It is delicious. You feel heavier.",
+                "next": "stay",
+                "reward": "pizza",
+                "skip": false
+            }
+        }
+    },
+    "bear_room": {
+        "text": "There is a bear sleeping on the floor.\nMaybe, you should turn back.",
+        "actions": {
+            "left": {
+                "description": "Go through the left door.",
+                "text": "You go left",
+                "next": "button_room",
+                "reward": null,
+                "skip": false
+            },
+            "back": {
+                "description": "Go through the door behind you.",
+                "text": "You go back",
+                "next": "entrance",
+                "reward": null,
+                "skip": false
+            },
+            "pet": {
+                "description": "Pet the bear.",
+                "text": "You pet the bear. It is friendly. It gives you a flashlight.",
+                "next": "stay",
+                "reward": "flashlight",
+                "skip": false
+            }
+        }
+    },
+    "button_room": {
+        "text": "This room is strange. There is a giant computer with 3 buttons. They are red, green, and blue.",
+        "actions": {
+            "back": {
+                "description": "Go through the door behind you.",
+                "text": "You go back",
+                "next": "bear_room",
+                "reward": null,
+                "skip": false
+            },
+            "red": {
+                "description": "Press the red button.",
+                "text": "You press the red button. Nothing happens. It might be broken.",
+                "next": "stay",
+                "reward": null,
+                "skip": false
+            },
+            "green": {
+                "description": "Press the green button.",
+                "text": "You press the green button. You heard a loud creaking noise.",
+                "next": "stay",
+                "reward": "window_open",
+                "skip": false
+            },
+            "blue": {
+                "description": "Press the blue button.",
+                "text": "You press the blue button. A video of a funny monkey dancing plays on the computer.",
+                "next": "stay",
+                "reward": null,
+                "skip": false
+            }
+        }
+    },
+    "torch_room": {
+        "text": [
+            "This room is very scary. It's a library, but all the books say HOMEWORK on them. This is also a torch on the wall.",
+            "This room is very scary. It's a library, but all the books say HOMEWORK on them."
+        ],
+        "actions": {
+            "back": {
+                "description": "Run away from the scary homework.",
+                "text": "You run back through the door behind you.",
+                "next": "pizza_room",
+                "reward": null,
+                "skip": false
+            },
+            "read": {
+                "description": "Read one of the books",
+                "text": "You read of the books. The questions are very hard. Your brain explodes.",
+                "next": "game_over",
+                "reward": null,
+                "skip": false
+            },
+            "take": {
+                "description": "Take the torch. (You only carry one thing.)",
+                "text": "You take the torch. The fire is warm.",
+                "next": "stay",
+                "reward": "torch",
+                "skip": false
+            }
+        }
+    },
+    "end": {
+        "text": "You did it!"
+    },
+    "game_over": {
+        "text": "Oops, you died.\nGame Over"
+    },
+    "north_korea": {
+        "text": "Kim Jeong Eun wouldn't give you any of his pizza, so you starved to death.\nGame Over."
+    }
+}
