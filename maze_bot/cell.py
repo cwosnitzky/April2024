@@ -1,4 +1,4 @@
-import pygame.draw
+import pygame
 
 TILE_SIZE = 100
 
